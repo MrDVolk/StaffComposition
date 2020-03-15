@@ -34,6 +34,8 @@ namespace StaffComposition.Services.EntityServices
                     where !e.RecordDeleted.HasValue
                     select e;
 
+                LoadDependencies(query);
+
                 var entities = await query.ToListAsync();
                 var dtos = entities.Select(x => _mappingService.Map(x)).ToList();
 
@@ -50,6 +52,8 @@ namespace StaffComposition.Services.EntityServices
                     where !e.RecordDeleted.HasValue
                     where e.Id == id
                     select e;
+
+                LoadDependencies(query);
 
                 var entity = await query.SingleOrDefaultAsync();
                 if (entity == null)
@@ -91,6 +95,8 @@ namespace StaffComposition.Services.EntityServices
                     where !e.RecordDeleted.HasValue
                     select e;
 
+                LoadDependencies(query);
+
                 var entity = await query.SingleOrDefaultAsync();
                 if (entity == null)
                     throw new ArgumentException($"Сущность с Id={entityDto.Id} не найдена!");
@@ -118,6 +124,11 @@ namespace StaffComposition.Services.EntityServices
                 entity.RecordDeleted = DateTime.Now;
                 await db.SaveChangesAsync();
             }
+        }
+
+        protected virtual IQueryable<TEntity> LoadDependencies(IQueryable<TEntity> query)
+        {
+            return query;
         }
 
         private void Validate(TEntityDto dto)

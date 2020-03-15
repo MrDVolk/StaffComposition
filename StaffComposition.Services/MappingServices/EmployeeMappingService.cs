@@ -14,13 +14,15 @@ namespace StaffComposition.Services.MappingServices
             {
                 Id = entity.Id,
                 FullName = entity.FullName,
-                Departments = entity.EmployeeDepartments
-                    .Where(x => !x.Department.RecordDeleted.HasValue)
-                    .Select(x => new DepartmentDto
-                    {
-                        Id = x.DepartmentId,
-                        DepartmentName = x.Department.DepartmentName
-                    }).ToList()
+                Departments = entity.EmployeeDepartments != null
+                    ? entity.EmployeeDepartments
+                        .Where(x => !x.Department.RecordDeleted.HasValue)
+                        .Select(x => new DepartmentDto
+                        {
+                            Id = x.DepartmentId,
+                            DepartmentName = x.Department.DepartmentName
+                        }).ToList()
+                    : new List<DepartmentDto>()
             };
         }
 
@@ -44,6 +46,9 @@ namespace StaffComposition.Services.MappingServices
 
         private static List<EmployeeToDepartment> GetEntityEmployeeDepartments(EmployeeDto entityDto, Employee entity)
         {
+            if (entityDto.Departments == null)
+                return new List<EmployeeToDepartment>();
+
             return new List<EmployeeToDepartment>(
                 entityDto.Departments
                     .Where(x => x.Id.HasValue)

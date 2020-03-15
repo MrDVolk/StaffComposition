@@ -6,11 +6,11 @@ using StaffComposition.DAL.Models;
 namespace StaffComposition.Web.Controllers
 {
     [ApiController]
-    public class DepartmentController : BaseApiController<DepartmentDto>
+    public class DepartmentsController : BaseApiController<DepartmentDto>
     {
-        public DepartmentController(
+        public DepartmentsController(
             IService<DepartmentDto> service,
-            ILogger<DepartmentController> logger
+            ILogger<DepartmentsController> logger
         ) : base(service, logger)
         {
         }

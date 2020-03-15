@@ -31,7 +31,7 @@ namespace StaffComposition.Web.Controllers
             return Ok(result);
         }
 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<IActionResult> Get(Guid id)
         {
             var result = await _service.Get(id);
@@ -52,7 +52,7 @@ namespace StaffComposition.Web.Controllers
             return Ok(result);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(Guid id)
         {
             await _service.Delete(id);

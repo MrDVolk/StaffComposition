@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.29728.190
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffComposition.Data", "StaffComposition.Domain\StaffComposition.Data.csproj", "{86E0C517-1F92-4586-8AAB-1F38E365CF7A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffComposition.TestConsole", "StaffComposition.TestConsole\StaffComposition.TestConsole.csproj", "{C52752F0-D28C-4CD8-A5A2-78574A28DE0E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffComposition.Services", "StaffComposition.Services\StaffComposition.Services.csproj", "{65317203-B8F1-4127-888D-5D9B6828D2C5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffComposition.DAL", "StaffComposition.DAL\StaffComposition.DAL.csproj", "{1D091707-845F-43DE-93C1-1C02CB14A65C}"
@@ -23,10 +21,6 @@ Global
 		{86E0C517-1F92-4586-8AAB-1F38E365CF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86E0C517-1F92-4586-8AAB-1F38E365CF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86E0C517-1F92-4586-8AAB-1F38E365CF7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C52752F0-D28C-4CD8-A5A2-78574A28DE0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C52752F0-D28C-4CD8-A5A2-78574A28DE0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C52752F0-D28C-4CD8-A5A2-78574A28DE0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C52752F0-D28C-4CD8-A5A2-78574A28DE0E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{65317203-B8F1-4127-888D-5D9B6828D2C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{65317203-B8F1-4127-888D-5D9B6828D2C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{65317203-B8F1-4127-888D-5D9B6828D2C5}.Release|Any CPU.ActiveCfg = Release|Any CPU

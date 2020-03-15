@@ -33,6 +33,7 @@ namespace StaffComposition.Services.EntityServices
                     where e.Id == id
                     select e;
 
+                LoadDependencies(query);
                 var entity = await query.SingleOrDefaultAsync();
                 if (entity == null)
                     throw new ArgumentException($"Сущность с Id={id} не найдена!");
@@ -49,6 +50,15 @@ namespace StaffComposition.Services.EntityServices
         {
             if (string.IsNullOrWhiteSpace(dto.DepartmentName))
                 errors.Add("Не указано название отдела!");
+        }
+
+        protected override IQueryable<Department> LoadDependencies(IQueryable<Department> query)
+        {
+            query.Select(x => x.EmployeeDepartments).Load();
+            query.SelectMany(x => x.EmployeeDepartments.Select(y => y.Department)).Load();
+            query.SelectMany(x => x.EmployeeDepartments.Select(y => y.Employee)).Load();
+
+            return base.LoadDependencies(query);
         }
     }
 }
