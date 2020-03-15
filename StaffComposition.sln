@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffComposition.TestConsol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffComposition.Services", "StaffComposition.Services\StaffComposition.Services.csproj", "{65317203-B8F1-4127-888D-5D9B6828D2C5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffComposition.DAL", "StaffComposition.DAL\StaffComposition.DAL.csproj", "{1D091707-845F-43DE-93C1-1C02CB14A65C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StaffComposition.DAL", "StaffComposition.DAL\StaffComposition.DAL.csproj", "{1D091707-845F-43DE-93C1-1C02CB14A65C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StaffComposition.Web", "StaffComposition.Web\StaffComposition.Web.csproj", "{A1C3EAE9-82F8-4423-89FE-F361C511422C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{1D091707-845F-43DE-93C1-1C02CB14A65C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D091707-845F-43DE-93C1-1C02CB14A65C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D091707-845F-43DE-93C1-1C02CB14A65C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1C3EAE9-82F8-4423-89FE-F361C511422C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1C3EAE9-82F8-4423-89FE-F361C511422C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1C3EAE9-82F8-4423-89FE-F361C511422C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1C3EAE9-82F8-4423-89FE-F361C511422C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
