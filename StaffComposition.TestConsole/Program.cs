@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using StaffComposition.Data.Models;
@@ -23,13 +24,19 @@ namespace StaffComposition.TestConsole
             {
                 Id = Guid.NewGuid(),
                 FullName = "Иванов И.И.",
-                Department = department
+                EmployeeDepartments = new List<EmployeeToDepartment>()
             };
+            employee.EmployeeDepartments.Add(new EmployeeToDepartment{Department = department, Employee = employee});
 
             context.Employees.Add(employee);
             context.SaveChanges();
 
             var departmentCount = context.Departments.Count();
+            var employee1 = context.Employees.First();
+
+            var employee2 = context.Set<Employee>().First();
+
+            Console.WriteLine(employee1.FullName);
         }
     }
 }

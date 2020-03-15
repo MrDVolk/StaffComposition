@@ -13,5 +13,10 @@ namespace StaffComposition.Services
         public DbSet<Employee> Employees { get; set; }
 
         public DbSet<Department> Departments { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<EmployeeToDepartment>().HasKey(x => new {x.EmployeeId, x.DepartmentId});
+        }
     }
 }

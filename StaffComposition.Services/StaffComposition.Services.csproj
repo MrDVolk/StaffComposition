@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\StaffComposition.DAL\StaffComposition.DAL.csproj" />
     <ProjectReference Include="..\StaffComposition.Domain\StaffComposition.Data.csproj" />
   </ItemGroup>
 
