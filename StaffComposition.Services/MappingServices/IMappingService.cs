@@ -1,6 +1,4 @@
-﻿using StaffComposition.DAL;
-using StaffComposition.DAL.Models;
-using StaffComposition.Data;
+﻿using StaffComposition.DAL.Models;
 using StaffComposition.Data.Models;
 
 namespace StaffComposition.Services.MappingServices
@@ -11,7 +9,7 @@ namespace StaffComposition.Services.MappingServices
     {
         TEntityDto Map(TEntity entity);
 
-        TEntity Map(TEntityDto entity);
+        TEntity Map(TEntityDto entityDto);
 
         void Update(TEntity dest, TEntityDto source);
     }

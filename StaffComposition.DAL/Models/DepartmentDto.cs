@@ -7,7 +7,7 @@ namespace StaffComposition.DAL.Models
     [DataContract]
     public class DepartmentDto : IEntityDto
     {
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
 
         public string DepartmentName { get; set; }
 

@@ -8,7 +8,7 @@ namespace StaffComposition.DAL.Models
     public class EmployeeDto : IEntityDto
     {
         [DataMember]
-        public Guid Id { get; set; }
+        public Guid? Id { get; set; }
 
         [DataMember]
         public string FullName { get; set; }
